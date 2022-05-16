@@ -1,9 +1,7 @@
-[![Build Status](https://travis-ci.org/Fedict/commons-eid.svg?branch=develop)](https://travis-ci.org/Fedict/commons-eid)
-
 # README for Commons eID Project
 
 This project contains the source code tree of Commons eID.
-The source code is hosted at: https://github.com/Fedict/commons-eid.
+The source code was forked from this archived project: https://github.com/Fedict/commons-eid.
 
 The source code of the Commons eID Project is licensed under GNU LGPL v3.0.
 The license conditions can be found in the file: LICENSE.
