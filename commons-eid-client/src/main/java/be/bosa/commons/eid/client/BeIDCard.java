@@ -17,16 +17,6 @@
 
 package be.bosa.commons.eid.client;
 
-import be.bosa.commons.eid.client.event.BeIDCardListener;
-import be.bosa.commons.eid.client.exception.BeIDException;
-import be.bosa.commons.eid.client.exception.ResponseAPDUException;
-import be.bosa.commons.eid.client.impl.BeIDDigest;
-import be.bosa.commons.eid.client.impl.CCID;
-import be.bosa.commons.eid.client.impl.LocaleManager;
-import be.bosa.commons.eid.client.impl.VoidLogger;
-import be.bosa.commons.eid.client.spi.BeIDCardUI;
-import be.bosa.commons.eid.client.spi.Logger;
-
 import javax.smartcardio.ATR;
 import javax.smartcardio.Card;
 import javax.smartcardio.CardChannel;
@@ -34,7 +24,7 @@ import javax.smartcardio.CardException;
 import javax.smartcardio.CardTerminal;
 import javax.smartcardio.CommandAPDU;
 import javax.smartcardio.ResponseAPDU;
-import java.awt.*;
+import java.awt.GraphicsEnvironment;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -47,6 +37,16 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+
+import be.bosa.commons.eid.client.event.BeIDCardListener;
+import be.bosa.commons.eid.client.exception.BeIDException;
+import be.bosa.commons.eid.client.exception.ResponseAPDUException;
+import be.bosa.commons.eid.client.impl.BeIDDigest;
+import be.bosa.commons.eid.client.impl.CCID;
+import be.bosa.commons.eid.client.impl.LocaleManager;
+import be.bosa.commons.eid.client.impl.VoidLogger;
+import be.bosa.commons.eid.client.spi.BeIDCardUI;
+import be.bosa.commons.eid.client.spi.Logger;
 
 /**
  * One BeIDCard instance represents one Belgian Electronic Identity Card,
@@ -799,7 +799,7 @@ public class BeIDCard implements AutoCloseable {
 	}
 
 	/**
-	 * Reads a file and converts it to a certificagte.
+	 * Reads a file and converts it to a certificate.
 	 */
 	private X509Certificate generateCertificateOfType(FileType fileType) throws BeIDException, InterruptedException {
 		ByteArrayInputStream certificateInputStream = new ByteArrayInputStream(readFile(fileType));

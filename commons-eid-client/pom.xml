@@ -23,7 +23,7 @@
 		<groupId>be.bosa.commons-eid</groupId>
 		<artifactId>commons-eid-parent</artifactId>
 		<version>1.0.6-SNAPSHOT</version>
-		<relativePath>..</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>commons-eid-client</artifactId>
